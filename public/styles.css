@@ -1,0 +1,143 @@
+/* Contenedor del formulario de inicio de sesión */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+/* Tarjeta del formulario */
+.login-card {
+    background: rgba(255, 255, 255, 0.9); /* Blanco con transparencia */
+    padding: 40px; /* Más espacio interno */
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    max-width: 500px; /* Aumentamos el tamaño */
+    min-height: 400px; /* Definimos una altura mínima */
+}
+
+/* Contenedor estático sin efectos para inicio de sesión */
+.static-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white; /* Fondo sólido */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos del formulario */
+.login-card .form-control,
+.static-container .form-control {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Botón de inicio de sesión */
+.login-card .btn,
+.static-container .btn {
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: gold;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.search-box {
+    background-color: #222;
+    border: 1px solid #555;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Contenedor general con efecto de movimiento */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(230, 226, 226, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product .name {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product .price {
+    color: green;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #111;
+    color: rgb(212, 209, 209);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

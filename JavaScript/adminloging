@@ -1,0 +1,27 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+
+    // Usuario y contraseña predefinidos para el administrador
+    const usuarioAdmin = "admin";
+    const contrasenaAdmin = "admin123";  // Cambia esto por una contraseña más segura
+
+    // Cuando el formulario es enviado
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();  // Evita el comportamiento por defecto (recargar la página)
+
+        // Obtener valores del formulario
+        const usuario = document.getElementById("usuario").value;
+        const contrasena = document.getElementById("contraseña").value;
+
+        // Verifica las credenciales de los admiistradores compañeros
+        if (usuario === usuarioAdmin && contrasena === contrasenaAdmin) {
+            // Guardar el estado de inicio de sesión en el localStorage
+            localStorage.setItem("admin_logged_in", true);
+            // Redirigir al panel de administrador
+            window.location.href = "admin_dashboard.html";
+        } else {
+            // Si las credenciales son incorrectas, mostrar un mensaje de error
+            alert("Usuario o contraseña incorrectos.");
+        }
+    });
+});
